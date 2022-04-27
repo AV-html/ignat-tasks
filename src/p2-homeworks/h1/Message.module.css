@@ -1,6 +1,8 @@
 .message {
+    padding: 15px 0;
+    background-color: lime;
+
     display: flex;
-    margin-bottom: 15px;
 }
 
 .avatar {
@@ -45,7 +47,7 @@
     width: 20px;
     height: 21px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: lime;
     position: absolute;
     bottom: 1px;
     left: -20px;
@@ -69,7 +71,7 @@
 
 .text span {
     display: inline-block;
-    padding-right: 50px;
+    padding-right: 65px;
 }
 
 .time {
