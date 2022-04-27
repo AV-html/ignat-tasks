@@ -20,6 +20,7 @@ function Message(props: MessagePropsType) {
                 </div>
                 <div className={m.text}>
                     {props.message}
+                    <span/>
                 </div>
                 <div className={m.time}>
                     {props.time}
