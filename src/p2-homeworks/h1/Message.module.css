@@ -79,6 +79,7 @@
     color: #C7E0C9;
     font-size: 16px;
     line-height: 130%;
+    word-wrap: break-word;
 }
 
 .text span {
