@@ -1,6 +1,6 @@
 import React from 'react'
 import Affair from './Affair'
-import {AffairType, FilterType} from './HW2'
+import { AffairType, FilterType } from './HW2'
 
 type AffairsPropsType = { // need to fix any
     data: Array<AffairType>
@@ -19,7 +19,7 @@ function Affairs(props: AffairsPropsType) {
 
     const setAll = () => {
         props.setFilter('all')
-    } // need to fix
+    }
     const setHigh = () => {
         props.setFilter('high')
     }
@@ -30,9 +30,10 @@ function Affairs(props: AffairsPropsType) {
         props.setFilter('low')
     }
 
+
+
     return (
         <div>
-
             {mappedAffairs}
 
             <button onClick={setAll}>All</button>
