@@ -1,36 +1,39 @@
 import React, {useState} from 'react'
 import Greeting from './Greeting'
+import {UserType} from './HW3';
 
 type GreetingContainerPropsType = {
-    users: Array<string>
+    users: Array<UserType>
     addUserCallback: (name: string) => void
 }
 
-export type ErrorType = 'error' | '';
 
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => {
     const [name, setName] = useState<string>('')
-    const [error, setError] = useState<ErrorType>('')
+    const [error, setError] = useState<string>('')
 
     const setNameCallback = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setName(e.currentTarget.value);
+        const name = e.currentTarget.value.trim()
 
-        if (e.currentTarget.value.length) {
-            setError('');
+
+        if (name) {
+            setName(name);
+            error && setError(''); // Обнулять ошибку, если она была!
         } else {
+            name && setName('')
             setError('error');
         }
 
     }
     const addUser = () => {
         addUserCallback(name)
-        alert(`Hello ${name}!`) // need to fix
+        alert(`Hello ${name}!`)
         setName('')
     }
 
     const onKeyHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === 'Enter') {
+        if (name && e.key === 'Enter') {
             addUser();
         }
     }
