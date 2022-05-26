@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import Affairs from './Affairs'
 
 // types
@@ -12,11 +12,11 @@ export type FilterType = 'all' | AffairPriorityType
 
 // constants
 const defaultAffairs: Array<AffairType> = [
-    { _id: 1, name: 'React', priority: 'high' },
-    { _id: 2, name: 'anime', priority: 'low' },
-    { _id: 3, name: 'games', priority: 'low' },
-    { _id: 4, name: 'work', priority: 'high' },
-    { _id: 5, name: 'html & css', priority: 'middle' },
+    {_id: 1, name: 'React', priority: 'high'},
+    {_id: 2, name: 'anime', priority: 'low'},
+    {_id: 3, name: 'games', priority: 'low'},
+    {_id: 4, name: 'work', priority: 'high'},
+    {_id: 5, name: 'html & css', priority: 'middle'},
 ]
 
 // pure helper functions
@@ -25,7 +25,7 @@ export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): A
     // if (filter === 'middle') return affairs.filter((affair) => affair.priority === 'middle')
     // if (filter === 'high') return affairs.filter((affair) => affair.priority === 'high')
     // return affairs
-    return affairs.filter((affair) => affair.priority === filter);
+    return filter === 'all' ? affairs : affairs.filter((affair) => affair.priority === filter);
 }
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => {
     return affairs.filter(affair => affair._id !== _id)
@@ -43,7 +43,7 @@ function HW2() {
 
     return (
         <div>
-            <hr />
+            <hr/>
             homeworks 2
 
             {/*should work (должно работать)*/}
@@ -53,10 +53,10 @@ function HW2() {
                 deleteAffairCallback={deleteAffairCallback}
             />
 
-            <hr />
+            <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeAffairs/>*/}
-            <hr />
+            <hr/>
         </div>
     )
 }
