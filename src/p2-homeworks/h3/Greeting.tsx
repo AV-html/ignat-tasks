@@ -15,7 +15,7 @@ type GreetingPropsType = {
 const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers, onKeyHandler}
 ) => {
-    const isEmptyInput = !name.length;
+    const isEmptyInput = !name.trim();
     const isNotError = !error;
 
     const inputClass = isNotError ? '' : s.error;

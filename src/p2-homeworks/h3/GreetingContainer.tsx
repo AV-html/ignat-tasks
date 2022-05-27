@@ -14,21 +14,32 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const [error, setError] = useState<string>('')
 
     const setNameCallback = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const name = e.currentTarget.value.trim()
+        const name = e.currentTarget.value
 
-        if (name) {
-            setName(name);
-            error && setError(''); // Обнулять ошибку, если она была!
-        } else {
-            name && setName('')
-            setError('error');
-        }
+        setName(name);
+        error && setError(''); // Обнулять ошибку, если она была!
+        name || setError('Invalid Value'); // Если имя пустое, то рисовать ошибку
+
+        // if (name) {
+        //     setName(name);
+        //     error && setError('');
+        // } else {
+        //     setName('')
+        //     setError('Invalid Value');
+        // }
 
     }
     const addUser = () => {
-        addUserCallback(name)
-        alert(`Hello ${name}!`)
+        const newName = name.trim()
+        // if (newName) {
+        alert(`Hello ${newName}!`)
+        addUserCallback(newName)
         setName('')
+        // }
+        // else {
+        //     setError('Invalid Value');
+        // }
+
     }
 
     const onKeyHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
