@@ -3,5 +3,58 @@
 }
 
 .spanClassName {
+    font-size: 14px;
+    line-height: 130%;
+    color: rgba(31, 32, 65, 0.5);
+}
 
+
+.defaultClass {
+    padding-left: 30px;
+}
+
+.defaultClass input {
+    appearance: none;
+
+}
+
+.defaultClass .checkbox {
+    margin-left: -30px;
+    margin-top: -1px;
+
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    background-color: #fff;
+    background-position: 50%;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    transition: all 0.3s ease 0s;
+}
+
+.defaultClass input:checked + .checkbox {
+    border: 1px solid #BC9CFF;
+    background: url("data:image/svg+xml,%3Csvg width='10' height='9' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 9'%3E%3Cpath fill='%23BC9CFF' d='M1.464 2.408L5.707 6.65 4.293 8.065.05 3.822l1.414-1.414z'/%3E%3Cpath fill='%23BC9CFF' d='M8.535.993L9.95 2.408 4.293 8.065 2.879 6.65 8.535.993z'/%3E%3C/svg%3E") 50% / 10px 9px no-repeat;
+}
+
+.defaultClass input:disabled + .checkbox {
+    border: 1px solid #E4D7FF;
+}
+
+.defaultClass input:disabled:checked + .checkbox {
+    background: url("data:image/svg+xml,%3Csvg width='10' height='9' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 9'%3E%3Cpath fill='%23E4D7FF' d='M1.464 2.408L5.707 6.65 4.293 8.065.05 3.822l1.414-1.414z'/%3E%3Cpath fill='%23E4D7FF' d='M8.535.993L9.95 2.408 4.293 8.065 2.879 6.65 8.535.993z'/%3E%3C/svg%3E") 50% / 10px 9px no-repeat;
+}
+
+
+.defaultClass input:hover + .checkbox {
+    border: 1px solid #a0a0a0;
+}
+
+.defaultClass input:checked:hover + .checkbox {
+    border: 1px solid #9b6ffa;
+}
+
+.defaultClass input:focus-visible + .checkbox {
+    outline: #a0a0a0 solid 1px;
 }
