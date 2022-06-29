@@ -47,14 +47,15 @@ function Clock() {
             </div>
 
             {show && (
-                <div>
+                <div style={{position: 'absolute'}}>
                     {stringDate}
                 </div>
             )}
 
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
-
+            <div style={{marginTop: '1.5em'}}>
+                <SuperButton onClick={start}>start</SuperButton>
+                <SuperButton onClick={stop}>stop</SuperButton>
+            </div>
         </div>
     )
 }
