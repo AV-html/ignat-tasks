@@ -27,8 +27,15 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}` // fix with date
-    const stringDate = `${date.getDay() < 10 ? '0' + date.getDay() : date.getMonth()}:${date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1}:${date.getFullYear()}` // fix with date
+    const correctTime = (time: number) => {
+        return time < 10 ? '0' + time : time
+        // return ('0' + time).slice(-2)
+    }
+
+
+    const stringTime = `${correctTime(date.getHours())}:${correctTime(date.getMinutes())}:${correctTime(date.getSeconds())}` // fix with date
+    const stringDate = `${correctTime(date.getDate())}.${correctTime(date.getMonth() + 1)}.${correctTime(date.getFullYear())}` // fix with date
+
 
     return (
         <div>
