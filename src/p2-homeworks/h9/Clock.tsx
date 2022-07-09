@@ -7,7 +7,7 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
-        window.clearInterval(timerId)
+        clearInterval(timerId)
     }
     const start = () => {
         stop()
@@ -27,14 +27,16 @@ function Clock() {
         setShow(false)
     }
 
-    const correctTime = (time: number) => {
-        return time < 10 ? '0' + time : time
-        // return ('0' + time).slice(-2)
-    }
+    // const correctTime = (time: number) => {
+    //     return time < 10 ? '0' + time : time
+    //     // return ('0' + time).slice(-2)
+    // }
+    // const stringTime = `${correctTime(date.getHours())}:${correctTime(date.getMinutes())}:${correctTime(date.getSeconds())}` // fix with date
+    // const stringDate = `${correctTime(date.getDate())}.${correctTime(date.getMonth() + 1)}.${correctTime(date.getFullYear())}` // fix with date
 
 
-    const stringTime = `${correctTime(date.getHours())}:${correctTime(date.getMinutes())}:${correctTime(date.getSeconds())}` // fix with date
-    const stringDate = `${correctTime(date.getDate())}.${correctTime(date.getMonth() + 1)}.${correctTime(date.getFullYear())}` // fix with date
+    const stringTime = date.toLocaleTimeString() // fix with date
+    const stringDate = date.toLocaleDateString() // fix with date
 
 
     return (
