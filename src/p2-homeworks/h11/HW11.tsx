@@ -3,8 +3,8 @@ import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 
 function HW11() {
-    const [value1, setValue1] = useState(-10)
-    const [value2, setValue2] = useState(110)
+    const [value1, setValue1] = useState(10)
+    const [value2, setValue2] = useState(90)
 
     const onChangeRange1 = (value: number) => {
         setValue1(value)
