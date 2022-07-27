@@ -9,15 +9,16 @@
     border-radius: 5px;
 }
 
-.progress {
+
+.slider .progress {
     height: 5px;
     border-radius: 5px;
-    background-color: #0a0a0a;
+    background-color: goldenrod;
 
     position: absolute;
 }
 
-.range-input input {
+.rangeInput input {
     position: absolute;
     top: -2px;
     left: -2px;
@@ -29,7 +30,15 @@
     pointer-events: none;
 }
 
-.range-input input::-webkit-slider-thumb {
+.rangeInput input:disabled::-webkit-slider-thumb {
+    background-color: #ddd;
+}
+
+.rangeInput input:disabled::-moz-range-thumb {
+    background-color: #ddd;
+}
+
+.rangeInput input::-webkit-slider-thumb {
     height: 17px;
     width: 17px;
     border-radius: 50%;
@@ -38,7 +47,7 @@
     pointer-events: auto;
 }
 
-.range-input input::-moz-range-thumb {
+.rangeInput input::-moz-range-thumb {
     height: 17px;
     width: 17px;
     border: none;

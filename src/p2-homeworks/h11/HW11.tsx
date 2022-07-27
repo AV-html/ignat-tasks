@@ -3,8 +3,8 @@ import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 
 function HW11() {
-    const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
+    const [value1, setValue1] = useState(-10)
+    const [value2, setValue2] = useState(110)
 
     const onChangeRange1 = (value: number) => {
         setValue1(value)
@@ -30,15 +30,13 @@ function HW11() {
                 />
             </div>
 
-            {/*// ! Учесть, когда values2 больше max*/}
-            {/*// ! Учесть когда values2 меньше min*/}
-            {/*// ! Учесть 2 класса - слайдер и кружочки */}
 
             <div>
                 <span>{value1}</span>
                 <SuperDoubleRange
                     value={[value1, value2]}
                     onChangeRange={onChangeRange2}
+
                     // сделать так чтоб value1 и value2 изменялось
                 />
                 <span>{value2}</span>
