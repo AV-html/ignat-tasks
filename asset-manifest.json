@@ -1,23 +1,14 @@
 {
   "files": {
-    "main.css": "/simple-react-components/static/css/main.71276e82.chunk.css",
-    "main.js": "/simple-react-components/static/js/main.f3aa00cd.chunk.js",
-    "main.js.map": "/simple-react-components/static/js/main.f3aa00cd.chunk.js.map",
-    "runtime-main.js": "/simple-react-components/static/js/runtime-main.071867b2.js",
-    "runtime-main.js.map": "/simple-react-components/static/js/runtime-main.071867b2.js.map",
-    "static/js/2.0e6fd469.chunk.js": "/simple-react-components/static/js/2.0e6fd469.chunk.js",
-    "static/js/2.0e6fd469.chunk.js.map": "/simple-react-components/static/js/2.0e6fd469.chunk.js.map",
+    "main.css": "/simple-react-components/static/css/main.c982627d.css",
+    "main.js": "/simple-react-components/static/js/main.6ff29d83.js",
+    "static/media/spinner.gif": "/simple-react-components/static/media/spinner.8e34e37063a42d7180cd.gif",
     "index.html": "/simple-react-components/index.html",
-    "precache-manifest.920064aaf4df21b3af5713d3d6d4cbe8.js": "/simple-react-components/precache-manifest.920064aaf4df21b3af5713d3d6d4cbe8.js",
-    "service-worker.js": "/simple-react-components/service-worker.js",
-    "static/css/main.71276e82.chunk.css.map": "/simple-react-components/static/css/main.71276e82.chunk.css.map",
-    "static/js/2.0e6fd469.chunk.js.LICENSE.txt": "/simple-react-components/static/js/2.0e6fd469.chunk.js.LICENSE.txt",
-    "static/media/spinner.gif": "/simple-react-components/static/media/spinner.dc474c07.gif"
+    "main.c982627d.css.map": "/simple-react-components/static/css/main.c982627d.css.map",
+    "main.6ff29d83.js.map": "/simple-react-components/static/js/main.6ff29d83.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.071867b2.js",
-    "static/js/2.0e6fd469.chunk.js",
-    "static/css/main.71276e82.chunk.css",
-    "static/js/main.f3aa00cd.chunk.js"
+    "static/css/main.c982627d.css",
+    "static/js/main.6ff29d83.js"
   ]
 }
