@@ -10,8 +10,9 @@ function HW11() {
         setValue1(value)
     }
 
-    const onChangeRange2 = (value: number) => {
-        setValue2(value)
+    const onChangeRange2 = (value: [number, number]) => {
+        setValue1(value[0])
+        setValue2(value[1])
     }
 
     return (
@@ -21,16 +22,23 @@ function HW11() {
 
             {/*should work (должно работать)*/}
             <div>
-                <span>{value1}</span>
+                <div>{value1}</div>
                 <SuperRange
                     onChangeRange={onChangeRange1}
+                    value={value1}
                     // сделать так чтоб value1 изменялось
                 />
             </div>
 
+            {/*// ! Учесть, когда values2 больше max*/}
+            {/*// ! Учесть когда values2 меньше min*/}
+            {/*// ! Учесть 2 класса - слайдер и кружочки */}
+
             <div>
                 <span>{value1}</span>
                 <SuperDoubleRange
+                    value={[value1, value2]}
+                    onChangeRange={onChangeRange2}
                     // сделать так чтоб value1 и value2 изменялось
                 />
                 <span>{value2}</span>
