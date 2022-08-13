@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 
 function Clock() {
@@ -13,8 +13,8 @@ function Clock() {
         stop()
 
         const id: number = window.setInterval(() => {
-            setDate((date) => {
-                return new Date(date.getTime() + 1000)
+            setDate(() => {
+                return new Date()
             })
         }, 1000)
         setTimerId(id)
@@ -49,12 +49,12 @@ function Clock() {
             </div>
 
             {show && (
-                <div style={{ position: 'absolute' }}>
+                <div style={{position: 'absolute'}}>
                     {stringDate}
                 </div>
             )}
 
-            <div style={{ marginTop: '1.5em' }}>
+            <div style={{marginTop: '1.5em'}}>
                 <SuperButton onClick={start}>start</SuperButton>
                 <SuperButton onClick={stop}>stop</SuperButton>
             </div>

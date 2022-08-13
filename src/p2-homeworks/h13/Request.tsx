@@ -14,6 +14,8 @@ export function Request() {
             })
             .catch((error) => {
                 // Как типизировать ошибку?
+                // https://github.com/axios/axios/issues/3612
+
                 setResponse(JSON.stringify(error.response ? error.response.data.errorText : error.message))
                 console.log(error);
             })
