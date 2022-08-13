@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/simple-react-components/static/css/main.c982627d.css",
-    "main.js": "/simple-react-components/static/js/main.cadfedb6.js",
+    "main.js": "/simple-react-components/static/js/main.f69f2dce.js",
     "static/media/spinner.gif": "/simple-react-components/static/media/spinner.8e34e37063a42d7180cd.gif",
     "index.html": "/simple-react-components/index.html",
     "main.c982627d.css.map": "/simple-react-components/static/css/main.c982627d.css.map",
-    "main.cadfedb6.js.map": "/simple-react-components/static/js/main.cadfedb6.js.map"
+    "main.f69f2dce.js.map": "/simple-react-components/static/js/main.f69f2dce.js.map"
   },
   "entrypoints": [
     "static/css/main.c982627d.css",
-    "static/js/main.cadfedb6.js"
+    "static/js/main.f69f2dce.js"
   ]
 }
